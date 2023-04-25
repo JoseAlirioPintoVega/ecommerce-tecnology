@@ -1,0 +1,20 @@
+.purchases{
+    margin: 2rem;
+}
+.title__purchases{
+    border: 1px solid #0007;
+}
+.product__purchases{
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+.quantity__purchases{
+    padding: 0 1rem;
+    border: 1px solid gray;
+    margin-right: 1rem;
+}
+.quantity{
+    width: 100px;
+    padding-left: 1rem; 
+}
