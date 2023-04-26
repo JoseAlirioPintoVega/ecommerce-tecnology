@@ -29,7 +29,6 @@ const ProductDescription = ({ product }) => {
       .post(URL, data, getConfig())
       .then((res) => {
         dispatch(getUserCart());
-        console.log(res.data);
       })
       .catch((err) => console.log(err));
   };

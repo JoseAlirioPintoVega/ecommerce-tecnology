@@ -4,6 +4,7 @@ import Cartproduct from "../components/Home/Cardproduct";
 import "../css/home.css";
 import FilterCategory from "../components/Home/FilterCategory";
 import FilterPrice from "../components/Home/FilterPrice";
+import ToOrderProducts from "../components/Home/toOrderProducts";
 
 const Home = () => {
   const [productsFilter, setProductsFilter] = useState();
@@ -36,14 +37,13 @@ const Home = () => {
   const filterCallback = (prod) => {
     return +prod.price >= inputPrice.from && +prod.price <= inputPrice.to;
   };
-  console.log(productsFilter?.length);
-  console.log(productsFilter?.filter(filterCallback).length);
 
   return (
     <div>
       <input value={inputValue} onChange={handleChange} type="text" />
       <FilterPrice setInputPrice={setInputPrice} />
       <FilterCategory setInputValue={setInputValue} />
+      <ToOrderProducts />
       <div className="products-container">
         {productsFilter &&
         productsFilter.filter(filterCallback).length !== 0 ? (

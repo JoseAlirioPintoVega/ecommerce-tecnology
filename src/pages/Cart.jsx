@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Cardproduct from "../components/Home/Cardproduct";
 import ProductInCart from "../components/Cart/ProductInCart";
@@ -7,6 +7,9 @@ import getConfig from "../utils/getConfig";
 import { getUserCart } from "../store/slices/cart.slice";
 
 const Cart = () => {
+  useEffect(() => {
+    dispatch(getUserCart());
+  }, []);
   const dispatch = useDispatch();
   const cardProduct = useSelector((state) => state.cart);
   const handleCheckout = () => {
@@ -21,7 +24,6 @@ const Cart = () => {
     axios
       .post(URL, data, getConfig())
       .then((res) => {
-        console.log(res);
         dispatch(getUserCart());
       })
       .catch((err) => {

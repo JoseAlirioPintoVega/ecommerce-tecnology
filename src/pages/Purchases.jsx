@@ -13,7 +13,6 @@ const Purchases = () => {
       .then((res) => setpurchasesList(res.data.data.purchases))
       .catch((err) => console.log(err));
   }, []);
-  console.log(purchasesList);
 
   return (
     <div>
