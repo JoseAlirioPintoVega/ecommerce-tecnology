@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import ProductDescription from "../components/Productinfo/ProductDescription";
 import { useSelector } from "react-redux";
 import Cartproduct from "../components/Home/Cardproduct";
+import SliderImg from "../components/Productinfo/SliderImg";
 
 const Productinfo = () => {
   const { id } = useParams();
@@ -35,6 +36,7 @@ const Productinfo = () => {
   return (
     <div>
       <ProductDescription product={product} />
+      <SliderImg listImgs={product?.productImgs} />
       <div>
         <section>
           <h2>Discover similar items</h2>

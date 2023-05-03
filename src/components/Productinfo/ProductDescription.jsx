@@ -2,11 +2,12 @@ import axios from "axios";
 import React, { useState } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import getConfig from "../../utils/getConfig";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getUserCart } from "../../store/slices/cart.slice";
 
 const ProductDescription = ({ product }) => {
   const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart);
 
   const [counter, setCounter] = useState(1);
 
@@ -30,8 +31,31 @@ const ProductDescription = ({ product }) => {
       .then((res) => {
         dispatch(getUserCart());
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        if (
+          err.response.data.message ===
+          "You already added this product to the cart"
+        ) {
+          const URLPatch = "https://e-commerce-api.academlo.tech/api/v1/cart";
+          const prevQuantity = cart.filter((e) => e.id == product.id)[0]
+            .productsInCart.quantity;
+          const data = {
+            id: product.id,
+            newQuantity: prevQuantity + counter,
+          };
+          axios
+            .patch(URLPatch, data, getConfig())
+            .then((res) => {
+              dispatch(getUserCart());
+              console.log(res.data);
+            })
+            .catch((err) => console.log(err));
+        } else {
+          console.log(err);
+        }
+      });
   };
+
   return (
     <div>
       <article className="productinfo-container">

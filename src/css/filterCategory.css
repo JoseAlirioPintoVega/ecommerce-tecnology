@@ -1,0 +1,13 @@
+.filterCategory-container{
+    padding: 10px 1rem;
+}
+.filterCategory__list{
+
+      padding: 4px 8px ;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+}
+.filterCategory__li{
+  
+}

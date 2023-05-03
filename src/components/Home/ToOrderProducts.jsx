@@ -4,6 +4,7 @@ import {
   ascendingOrderProducts,
   descendingOrderProducts,
 } from "../../store/slices/product.slice";
+import "../../css/toOrderProducts.css";
 
 const ToOrderProducts = () => {
   const dispatch = useDispatch();
@@ -15,9 +16,13 @@ const ToOrderProducts = () => {
     dispatch(descendingOrderProducts());
   };
   return (
-    <div>
-      <button onClick={handleAscending}>Ascending Order</button>
-      <button onClick={handleDescending}>Descending Order</button>
+    <div className="order-container">
+      <button className="btn asc" onClick={handleAscending}>
+        Ascending Order
+      </button>
+      <button className="btn des" onClick={handleDescending}>
+        Descending Order
+      </button>
     </div>
   );
 };

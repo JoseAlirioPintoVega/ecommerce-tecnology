@@ -5,6 +5,8 @@ import "../css/home.css";
 import FilterCategory from "../components/Home/FilterCategory";
 import FilterPrice from "../components/Home/FilterPrice";
 import ToOrderProducts from "../components/Home/toOrderProducts";
+import { BsSearch } from "react-icons/bs";
+import { FiFilter } from "react-icons/fi";
 
 const Home = () => {
   const [productsFilter, setProductsFilter] = useState();
@@ -39,10 +41,28 @@ const Home = () => {
   };
 
   return (
-    <div>
-      <input value={inputValue} onChange={handleChange} type="text" />
-      <FilterPrice setInputPrice={setInputPrice} />
-      <FilterCategory setInputValue={setInputValue} />
+    <div className="home-container">
+      <div className="home__search">
+        <input
+          className="home__search-input"
+          value={inputValue}
+          onChange={handleChange}
+          type="text"
+        />
+        <div className="home__search-icon">
+          <BsSearch />
+        </div>
+      </div>
+      <div>
+        <h2>
+          <FiFilter />
+          Filters
+        </h2>
+        <div>
+          <FilterPrice setInputPrice={setInputPrice} />
+          <FilterCategory setInputValue={setInputValue} />
+        </div>
+      </div>
       <ToOrderProducts />
       <div className="products-container">
         {productsFilter &&
