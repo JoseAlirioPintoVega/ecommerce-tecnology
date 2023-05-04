@@ -1,15 +1,24 @@
 .purchases{
     margin: 2rem;
 }
-.title__purchases{
-    border: 1px solid #0007;
+.title__purchase{
+   font-size: 1.3rem;
+   margin-bottom: 16px;
 }
-.product__purchases{
-    margin-top: 8px;
+.name__purchase{
+    font-size: 0.9rem;
+}
+.purchases-container{
+    background-color: rgb(241, 222, 222);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.product__purchase{
+    margin:6px  8px;
     display: flex;
     justify-content: space-between;
 }
-.quantity__purchases{
+.quantity__purchase{
     padding: 0 1rem;
     border: 1px solid gray;
     margin-right: 1rem;
@@ -17,4 +26,5 @@
 .quantity{
     width: 100px;
     padding-left: 1rem; 
+    width: 90px;
 }

@@ -1,0 +1,89 @@
+.register-container,
+.login-container{
+    margin: 8vh auto ;
+    width: 300px;
+    height: auto;
+    /* border: 1px solid orange; */
+    border-radius: 30px ;
+    overflow: hidden;
+    background-color: rgb(255, 250, 250);
+}
+.form__register,
+.form__login{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 2rem 1.2rem;
+}
+.img__register,
+.img__login{
+    height: 100px;
+   /*  background-color: orange; */
+    background-image: url(https://images.pexels.com/photos/1293120/pexels-photo-1293120.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-position: center;
+    
+}
+.label__register,
+.label__login{
+    display: inline-block;
+    width: 80px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.input__register,
+.input__login{
+    display: block;
+    margin: 10px 30px;
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid black;
+    height: 25px;
+    padding: 4px 12px;
+}
+.btn-register,
+.btn-login{
+    width: 180px;
+    height: 34px;
+    border-radius: 20px;
+    align-self: center;
+    background-color: orange;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 700;
+    margin-top: 1rem;
+    
+}
+@media (min-width: 720px){
+
+    .register-container,
+    .login-container{
+        width: 450px;
+       
+    }
+    .div-form__register,
+    .div-form__login{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .label__register,
+    .label__login{
+        display: inline-block;
+        margin: auto 0;
+        font-size: 1.5rem;
+    }
+
+    .input__register,
+    .input__login{
+        display: inline-block;
+        margin: 10px 0;
+        width: 210px;
+        font-size: 1.2rem;
+        height: 35px;
+    }
+    .btn-register,
+    .btn-login{
+        width: 200px;
+    }
+}

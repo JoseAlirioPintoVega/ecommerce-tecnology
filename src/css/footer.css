@@ -1,0 +1,11 @@
+.footer-container{
+    display: fixed;
+    background-color: rgb(53, 53, 141);
+    padding: 1rem;
+    left: 0;
+}
+.title__footer{
+    width: 180px;
+    margin: 0 auto ;
+    color: orange;
+}

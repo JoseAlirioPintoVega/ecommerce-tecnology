@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import "../css/register.css";
 
 const Login = () => {
   const [islogged, setIslogged] = useState();
@@ -43,18 +44,28 @@ const Login = () => {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit(submit)}>
-        <div>
-          <label htmlFor="email">Email</label>
-          <input type="email" {...register("email")} />
+    <div className="login-container">
+      <div className="img__login"></div>
+      <form className="form__login" onSubmit={handleSubmit(submit)}>
+        <div className="div-form__login">
+          <label className="label__login" htmlFor="email">
+            Email
+          </label>
+          <input className="input__login" type="email" {...register("email")} />
         </div>
-        <div>
-          <label htmlFor="password">Password</label>
-          <input type="password" {...register("password")} />
+        <div className="div-form__login">
+          <label className="label__login" htmlFor="password">
+            Password
+          </label>
+          <input
+            className="input__login"
+            type="password"
+            {...register("password")}
+          />
         </div>
-        <button>Login</button>
+        <button className="btn-login">Login</button>
       </form>
+      <div className="img__login"></div>
     </div>
   );
 };

@@ -6,16 +6,14 @@ const PurchaseCard = ({ purchase }) => {
   return (
     <div>
       <article className="purchases">
-        <h4 className="title__purchases">
-          {dataPurchase.toLocaleDateString()}
-        </h4>
+        <h4 className="title__purchase">{dataPurchase.toLocaleDateString()}</h4>
         <section>
           <ul className="purchases-container">
             {purchase.cart.products.map((product) => (
-              <li className="product__purchases" key={product.id}>
-                <h4> {product.title}</h4>
-                <div className="product__purchases">
-                  <span className="quantity__purchases">
+              <li className="product__purchase" key={product.id}>
+                <h4 className="name__purchase"> {product.title}</h4>
+                <div className="product__purchase">
+                  <span className="quantity__purchase">
                     {product.productsInCart.quantity}
                   </span>
                   <span className="quantity">$ {product.price}</span>

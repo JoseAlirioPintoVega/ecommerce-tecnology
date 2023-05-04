@@ -1,0 +1,39 @@
+.title__cart{
+    margin: 1rem auto ;
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+}
+
+footer{
+   padding: 0 2rem;
+   margin: 0 1rem;
+}
+.footer__cart{
+    display: flex;
+    justify-content: end;
+    margin: .8rem;
+}
+.text-total__cart{
+    display: inline-block;
+}
+.number-total__cart{
+    display: inline-block;
+}
+.btn-container{
+    display: flex;
+    margin-bottom: 2rem;
+}
+.btn-checkout__cart{
+    margin: 0 auto ;
+    background-color: orange;
+    color: white;
+    width: 180px;
+    height: 35px;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+@media (min-width: 720px){
+
+}

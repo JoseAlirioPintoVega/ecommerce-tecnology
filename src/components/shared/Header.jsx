@@ -28,7 +28,8 @@ const Header = () => {
             </li>
             <li>
               <Link to="/login">
-                <CiLogin /> <span className="menu__header">Login </span>
+                <CiLogin />
+                <span className="menu__header">Login</span>
               </Link>
             </li>
             <li>

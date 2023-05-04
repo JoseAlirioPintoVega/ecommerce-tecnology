@@ -53,23 +53,28 @@ const ProductInCart = ({ prod }) => {
 
   return (
     <article className="product-cart-container">
-      <div>
-        <h3>{prod.brand}</h3>
-        <button onClick={handleclick}>
-          <BsTrash />
-        </button>
-      </div>
-
-      <h3>{prod.title}</h3>
-      <div>
-        <div>
-          <p onClick={handleMinus}>-</p>
-          <p>{prod.productsInCart.quantity}</p>
-          <p onClick={handlePlus}>+</p>
+      <div className="infoprod__prodInCart">
+        <h3 className="title__prodInCart">{prod.title}</h3>
+        <div className="counter__prodInCart">
+          <p className="minus__prodInCart" onClick={handleMinus}>
+            -
+          </p>
+          <p className="number-counter__prodInCart">
+            {prod.productsInCart.quantity}
+          </p>
+          <p className="plus__prodInCart" onClick={handlePlus}>
+            +
+          </p>
+          <button className="btn-trash__prodInCart" onClick={handleclick}>
+            <BsTrash className="icon-trash" />
+          </button>
         </div>
-        <p>Unit price:</p>
-        <span> $ {prod.price}</span>
+        <div>
+          <p className="text-price__prodInCart">Unit price:</p>
+          <span className="price__prodInCart"> $ {prod.price}</span>
+        </div>
       </div>
+      <div className="line"></div>
     </article>
   );
 };
