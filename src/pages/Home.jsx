@@ -4,7 +4,7 @@ import Cartproduct from "../components/Home/Cardproduct";
 import "../css/home.css";
 import FilterCategory from "../components/Home/FilterCategory";
 import FilterPrice from "../components/Home/FilterPrice";
-import ToOrderProducts from "../components/Home/toOrderProducts";
+import ToOrderProducts from "../components/Home/ToOrderProducts";
 import { BsSearch } from "react-icons/bs";
 import { FiFilter } from "react-icons/fi";
 
